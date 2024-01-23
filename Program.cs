@@ -10,10 +10,16 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            int[] arr = { 91, 62, 3, 7, 5, 1, 5, 3, 4, 2, 2, 4, 5, 1, 7, 4, 9 };
+            int n = 8;
 
-            Console.WriteLine($"Maximum: {arr.Max()}");
-            Console.WriteLine($"Minimum: {arr.Min()}");
+            for (int i = n; i > 0; i--)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write('*');
+                }
+                Console.WriteLine();
+            }
 
             Console.ReadLine();
         }
