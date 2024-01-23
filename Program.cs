@@ -27,9 +27,9 @@ namespace Arrays
                 }
 
 
-                if (count > 1 && !Values.Contains(arr[i]))
+                if (count == 1 && !Values.Contains(arr[i]))
                 {
-                    Console.WriteLine($"{arr[i]} ={count} ");
+                    Console.WriteLine(arr[i]);
                     Values.Add(arr[i]);
                 }
             }
