@@ -5,35 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Arrays
-
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int[] arr = { 91, 62, 3, 7, 5, 1, 5, 3, 4, 2, 2, 4, 5, 1, 7, 4, 9 };
-            HashSet<int> Values = new HashSet<int>();
+            string boy = "I am very exhausted";
+            string[] w = boy.Split(' ');
 
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < w.Length; i++)
             {
-                int count = 0;
-
-                for (int j = 0; j < arr.Length; j++)
-                {
-                    if (arr[i] == arr[j])
-                    {
-                        count++;
-                    }
-                }
-
-
-                if (count == 1 && !Values.Contains(arr[i]))
-                {
-                    Console.WriteLine(arr[i]);
-                    Values.Add(arr[i]);
-                }
+                char[] cp = w[i].ToCharArray();
+                Array.Reverse(cp);
+                w[i] = new string(cp);
             }
 
+            string rstring = string.Join(" ", w);
+
+            Console.WriteLine(rstring);
             Console.ReadLine();
         }
     }
