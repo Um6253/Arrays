@@ -10,24 +10,19 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            int n = 7;
+            string boy = "I am very exhausted";
+            string[] w = boy.Split(' ');
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < w.Length; i++)
             {
-                for (int j = 0; j < n; j++)
-                {
-                    if (i == 0 || j == 0 || i == n - 1 || j == n - 1)
-                    {
-                        Console.Write("*");
-                    }
-                    else
-                    {
-                        Console.Write(" ");
-                    }
-                }
-                Console.WriteLine();
+                char[] cp = w[i].ToCharArray();
+                Array.Reverse(cp);
+                w[i] = new string(cp);
             }
 
+            string rstring = string.Join(" ", w);
+
+            Console.WriteLine(rstring);
             Console.ReadLine();
         }
     }
