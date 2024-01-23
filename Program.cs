@@ -10,19 +10,13 @@ namespace Arrays
     {
         static void Main(string[] args)
         {
-            string boy = "I am very exhausted";
-            string[] w = boy.Split(' ');
-
-            for (int i = 0; i < w.Length; i++)
+            int[] num = {1, 2, 3, 4, 5, 6,4};
+            int sum = 0;
+           for(int i = 0; i < num.Length; i++)
             {
-                char[] cp = w[i].ToCharArray();
-                Array.Reverse(cp);
-                w[i] = new string(cp);
+               sum += num[i];
             }
-
-            string rstring = string.Join(" ", w);
-
-            Console.WriteLine(rstring);
+           Console.WriteLine(sum);
             Console.ReadLine();
         }
     }
